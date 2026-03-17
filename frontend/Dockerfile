@@ -21,5 +21,5 @@ ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 EXPOSE 3000
 
-# Start the application
-CMD ["npm", "start"]
+# Start the application, strictly locking to port 3000 to match Railway Proxy Target Port
+CMD ["npm", "start", "--", "-p", "3000"]
