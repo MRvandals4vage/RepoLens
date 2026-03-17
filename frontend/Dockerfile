@@ -16,7 +16,9 @@ ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 # Build the Next.js application
 RUN npm run build
 
-# Expose frontend port
+# Expose frontend port (Railway ignores this and uses its own PORT variable)
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 EXPOSE 3000
 
 # Start the application
