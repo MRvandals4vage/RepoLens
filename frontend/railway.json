@@ -3,9 +3,9 @@
     "build": {
         "builder": "DOCKERFILE",
         "dockerfilePath": "/frontend/Dockerfile",
-        "dockerContext": "/"
+        "dockerContext": "/frontend"
     },
     "deploy": {
-        "startCommand": "npm start"
+        "startCommand": "npm start -- -p 3000"
     }
 }
