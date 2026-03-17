@@ -1,7 +1,7 @@
 FROM node:20-bookworm-slim
 
 # Install git (for simple-git) and build tools (for tree-sitter native addons)
-RUN apt-get update && apt-get install -y --no-install-recommends git python3 make g++ && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends git python3 make g++ ca-certificates && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
